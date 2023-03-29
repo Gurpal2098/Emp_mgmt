@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+
+    <link rel="stylesheet" href="admlogin.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+
+
+     
+
+
+        <h1>Admin Login</h1>
+
+
+
+        <form action="adm" method="post">
+
+
+            <label for="username">User Name</label>
+            <input type="email" name="username" id="username" required></input>
+
+
+
+
+
+
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required></input>
+
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <script>
+            const usernameInput = document.getElementById('username');
+
+            usernameInput.addEventListener('input', function () {
+                const username = usernameInput.value.trim();
+
+
+                if (username.length < 6) {
+                    usernameInput.setCustomValidity('Username must be at least 6 characters long.');
+                } else {
+                    usernameInput.setCustomValidity('');
+                }
+            });
+        </script>
+
+
+    </main>
+
+
+</body>
+
+</html>
