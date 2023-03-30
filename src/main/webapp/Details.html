@@ -1,0 +1,229 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Have a nice day</h1>
+
+<form action="Emp" method="post">
+<input type="submit" value="Get All">
+</form>
+</body>
+</html>
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+</head>
+<style>
+    body {
+
+        background-color: #f2f2f2;
+        font-size: 16px;
+        color: #333;
+        line-height: 1.5;
+    }
+
+    .holiday-list {
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        width: 70%;
+    }
+
+    .holiday-list caption {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-decoration: underline;
+        text-decoration-color: #1e2227d2;
+        color: #120616;
+    }
+
+    .holiday-list thead {
+        background-color: #f8f8f8;
+        font-weight: bold;
+    }
+
+    .holiday-list th,
+    .holiday-list td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .holiday-list tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .holiday-list tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    .holiday-list th:first-child,
+    .holiday-list td:first-child {
+        text-align: left;
+    }
+
+    .right-align {
+        text-align: right;
+    }
+
+    .employee {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .left-align {
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .employee {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        top: 200px;
+        right: 20px;
+
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pagination a {
+        color: black;
+        padding: 8px 8px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .pagination a:hover:not(active) {
+        background-color: #ddd;
+    }
+
+    .pagination .active {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    .pagination a:first-child {
+        margin-right: auto;
+    }
+
+    .pagination a:last-child {
+        margin-left: auto;
+    }
+</style>
+
+<body>
+
+    <header></header>
+    <form action="Emp" method="post">
+    <main>
+
+
+        <h1 align="center">Welcome To Streams Solutions</h1>
+
+        <div class="right-align">
+
+            <span class="employee">Employee</span>
+        </div>
+
+
+
+        <div class="user-profile">
+            <img class="user-icon" src="icon.png" alt="User Icon" width="80px">
+            <span class="user-name"></span>
+        </div>
+
+
+
+
+
+        <div class="left-align">
+
+            <span class="employee" id="employee-name"></span>
+        </div>
+
+
+
+
+        <script>
+            const employeeName = "Pranshu";
+            document.getElementById("employee-name").textContent = employeeName
+        </script>
+
+
+
+
+
+
+
+        <div id="table-wrap">
+            <table class="holiday-list" id="myTable">
+
+
+
+                <caption>List of Holidays</caption>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Holiday</th>
+                        <th>Date</th>
+                        <th>Day of the Week</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-data">
+                    <tr>
+                        <td><input type="submit" value="Get All"></td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+            <script src="employee.js"></script>
+
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">Next</a>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </main>
+    </form>
+
+</body>
+
+</html>

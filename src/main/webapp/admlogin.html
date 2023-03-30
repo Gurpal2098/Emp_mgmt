@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+
+    <link rel="stylesheet" href="admlogin.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+
+
+
+
+
+        <h1>Admin Login</h1>
+
+
+
+
+        <form id="myForm" method="post">
+
+
+            <label for="username">User Name</label>
+            <input type="text" name="username" id="username"></input>
+
+
+
+
+
+            <script>
+                const form = document.getElementById("myForm");
+                const usernameInput = document.getElementById("username");
+
+                form.addEventListener("submit", function (event) {
+                    const username = usernameInput.value.trim();
+                    if (username === "") {
+                        event.preventDefault();
+                        displayError("This field is required");
+                    } else if (!isValidEmail(username)) {
+                        event.preventDefault();
+                        displayError("Invalid format");
+                    }
+                });
+
+                function isValidEmail(username) {
+                    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    return pattern.test(username);
+                }
+
+                function displayError(errorMessage) {
+                    const existingError = usernameInput.nextElementSibling;
+                    if (existingError && existingError.classList.contains("error")) {
+                        existingError.remove();
+                    }
+                    const errorDiv = document.createElement("div");
+                    errorDiv.className = "error";
+                    errorDiv.textContent = errorMessage;
+                    usernameInput.parentNode.insertBefore(errorDiv, usernameInput.nextSibling);
+                }
+            </script>
+
+
+
+
+
+
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"></input>
+
+
+
+            <span id="password-error" style="color: red;"></span><br><br>
+
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+
+        <script>
+            function validateForm() {
+                var password = document.getElementById("password").value;
+                if (password == "") {
+                    document.getElementById("password-error").innerHTML = "This field is required";
+                    return false;
+                }
+            }
+            document.getElementsByTagName("form")[0].onsubmit = validateForm;
+        </script>
+
+
+
+
+    </main>
+
+
+</body>
+
+</html>

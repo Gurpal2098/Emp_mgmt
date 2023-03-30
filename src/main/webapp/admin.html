@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!-- <script src="path/to/your/admin.js"></script> -->
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+
+<body>
+    <header>
+
+    </header>
+    <main>
+
+
+        <h1>Welcome To Streams Solutions</h1>
+
+
+        <div class="user-profile">
+            <img class="user-icon" src="icon.png" alt="error" width="80px">
+            <span class="user-name"></span>
+
+
+        </div>
+
+
+
+        <div class="left-align">
+
+            <span class="employee" id="employee-name"></span>
+        </div>
+
+        <script>
+            const employeeName = "Gurpal";
+            document.getElementById("employee-name").textContent = employeeName
+        </script>
+
+
+
+        <div class="dropdown">
+            <select name="designation" id="user-type">
+
+                <option value="admin">Admin</option>
+                <option value="employee">Employee</option>
+
+
+            </select>
+        </div>
+
+
+
+
+        <script>
+            document.getElementById("user-type").addEventListener("change", function () {
+                if (this.value === "employee") {
+                    window.location.href = "employee.html?user-type=employee";
+                }
+            });
+
+
+            var params = new URLSearchParams(window.location.search);
+            var userType = params.get("user-type");
+            if (userType === "employee") {
+                document.getElementById("user-type").value = "employee";
+            }
+            else {
+                document.getElementById("user-type").value = "admin";
+            }
+            window.onpopstate = function (event) {
+                if (window.location.pathname === "admin.html") {
+                    document.getElementById("user-type").value = "admin";
+
+                }
+            }
+
+        </script>
+
+
+        <div class="add-emp-container">
+            <button class="add-emp-btn">Add Employee</button>
+        </div>
+
+        <script>
+
+
+            document.querySelector(".add-emp-btn").addEventListener("click", function () {
+                window.location.href = "add.html";
+            });
+        </script>
+
+
+
+
+
+
+
+
+        <div id="table-wrap">
+            <table class="employee-list" id="myTable">
+
+                <caption>List of Employees</caption>
+                <thead>
+                    <tr>
+                        <th>Employee Id</th>
+                        <th>Employee Name</th>
+                        <th>Gender</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                        <th>Age</th>
+                        <th>Contact No.</th>
+                        <th>Action</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody id="employee-data">
+                    <tr>
+                        <td>1</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+
+                        </td>
+
+
+
+                       
+
+                      
+
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+                        <td>Loading...</td>
+
+
+                        <td><a href="edit.html" class="button ed">Edit</a>
+                            <button class="button del">Delete</button>
+                        </td>
+
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+
+            <div id="pagination"></div>
+
+
+
+
+
+
+            <script>
+                var deleteButtons = document.getElementsByClassName('del');
+
+                for (var i = 0; i < deleteButtons.length; i++) {
+                    deleteButtons[i].addEventListener('click', function () {
+                        var confirmDelete = confirm('Are you sure you want to delete the details?');
+
+                        if (confirmDelete) {
+                            var row = this.parentNode.parentNode;
+                            row.parentNode.removeChild(row);
+                        }
+                    });
+                }
+            </script>
+
+
+
+
+
+
+
+
+            <!-- <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">&raquo;</a>
+
+
+
+
+
+            </div>  -->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
