@@ -46,14 +46,14 @@ $result3 = mysqli_query($conn, $sql3);
 	<div id="divimg">
 	<div>
 
-		    	<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Holidays List </h2>
+		    	<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;">Holiday List </h2>
     	<table>
 
 			<tr bgcolor="#000">
 				<th align = "center">Sno.</th>
 				<th align = "center">Date</th>
-				<th align = "center">Days</th>
-				<th align = "center">Holidays</th>
+				<th align = "center">Day</th>
+				<th align = "center">Holiday</th>
 			</tr>
 
 			
