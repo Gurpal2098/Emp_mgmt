@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2019 at 08:34 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Mar 31, 2023 at 09:10 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -111,6 +110,38 @@ INSERT INTO `employee_leave` (`id`, `token`, `start`, `end`, `reason`, `status`)
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `holiday`
+--
+
+CREATE TABLE `holiday` (
+  `sno` int(10) NOT NULL,
+  `dates` date NOT NULL,
+  `days` varchar(15) NOT NULL,
+  `holidays` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `holiday`
+--
+
+INSERT INTO `holiday` (`sno`, `dates`, `days`, `holidays`) VALUES
+(1, '2023-01-02', 'Monday', 'In-lieu of New Year'),
+(2, '2023-01-26', 'Thursday', 'Repblic Day'),
+(3, '2023-03-08', 'Wednesday', 'Holi'),
+(4, '2023-04-07', 'Friday', 'Good Friday'),
+(5, '2023-06-29', 'Thursday', 'Eid al-Adha'),
+(6, '2023-08-15', 'Tuesday', 'Independence Day'),
+(7, '2023-10-02', 'Monday', 'Mahatma Gandhi Jayanti'),
+(8, '2023-10-24', 'Tuesday', 'Dussehra'),
+(9, '2023-11-13', 'Monday', 'In-lieu of Diwali'),
+(10, '2023-12-25', 'Monday', 'Christmas'),
+(11, '2023-12-31', 'Sunday', 'Last day of the Year'),
+(12, '2023-08-30', 'Thursday', 'Raksha Bandhan'),
+(13, '2023-11-27', 'Monday', 'Guru Nanak Jayanti');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `project`
 --
 
@@ -151,7 +182,7 @@ INSERT INTO `project` (`pid`, `eid`, `pname`, `duedate`, `subdate`, `mark`, `sta
 
 CREATE TABLE `rank` (
   `eid` int(11) NOT NULL,
-  `points` int(11) DEFAULT '0'
+  `points` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -226,6 +257,12 @@ ALTER TABLE `employee_leave`
   ADD KEY `employee_leave_ibfk_1` (`id`);
 
 --
+-- Indexes for table `holiday`
+--
+ALTER TABLE `holiday`
+  ADD PRIMARY KEY (`sno`);
+
+--
 -- Indexes for table `project`
 --
 ALTER TABLE `project`
@@ -265,6 +302,12 @@ ALTER TABLE `employee`
 --
 ALTER TABLE `employee_leave`
   MODIFY `token` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=311;
+
+--
+-- AUTO_INCREMENT for table `holiday`
+--
+ALTER TABLE `holiday`
+  MODIFY `sno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `project`
