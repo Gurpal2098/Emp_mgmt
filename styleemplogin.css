@@ -6,10 +6,10 @@ body{
 }
 
 header{
-	background: black;
-	color: white;
-	padding: 8px 20px 6px 40px;
-	height: 50px;
+	background: #fff;
+    color: #160101;
+    padding: 8px 20px 6px 40px;
+    height: 50px;
 }
 
 header h1{
