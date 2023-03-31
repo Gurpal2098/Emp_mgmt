@@ -34,16 +34,17 @@ $result = mysqli_query($conn, $sql);
 			<tr>
 
 				<th align = "center">Emp. ID</th>
-				<th align = "center">Picture</th>
+				<!-- <th align = "center">Picture</th> -->
 				<th align = "center">Name</th>
 				<th align = "center">Email</th>
-				<th align = "center">Birthday</th>
+				<th align = "center">DOB</th>
+				
 				<th align = "center">Gender</th>
 				<th align = "center">Contact</th>
 				<th align = "center">Reporting Manager</th>
 				<th align = "center">Address</th>
 				<th align = "center">Department</th>
-				<th align = "center">Degree</th>
+				<th align = "center">Designation</th>
 							
 				
 				<th align = "center">Options</th>
@@ -53,9 +54,9 @@ $result = mysqli_query($conn, $sql);
 				while ($employee = mysqli_fetch_assoc($result)) {
 					echo "<tr>";
 					echo "<td>".$employee['id']."</td>";
-					echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
+					// echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
-					
+					// echo "<td>".$employee['salary']."<td>"
 					echo "<td>".$employee['email']."</td>";
 					echo "<td>".$employee['birthday']."</td>";
 					echo "<td>".$employee['gender']."</td>";

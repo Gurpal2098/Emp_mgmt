@@ -79,7 +79,7 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-1" type="date" placeholder="BIRTHDATE" name="birthday" required="required">
+                                    <input class="input--style-1" type="date" placeholder="DOB" name="birthday" required="required">
                                    
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Degree" name="degree" required="required">
+                            <input class="input--style-1" type="text" placeholder="Designation" name="degree" required="required">
                         </div>
 
                         <div class="input-group">
