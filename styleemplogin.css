@@ -6,8 +6,8 @@ body{
 }
 
 header{
-	background: #fff;
-    color: #160101;
+	background: #191717;
+    color: #fff;
     padding: 8px 20px 6px 40px;
     height: 50px;
 }
@@ -31,7 +31,7 @@ nav ul {
 nav ul li{
 	display: inline-block;
 	list-style-type: none;
-	color: white;
+	color: black;
 	float: left;
 	margin-left: 12px;
 	
@@ -39,8 +39,8 @@ nav ul li{
 }
 
 nav ul li a{
-	color: white;
-	text-decoration: none;	
+	color: #fff;
+    text-decoration: none;
 }
 
 
